@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>비밀번호 입력</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "mypassword123") {  // 비밀번호 설정
+                document.getElementById("videoLink").style.display = "block";
+            } else {
+                alert("비밀번호가 틀렸습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>비밀번호를 입력하세요</h2>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">확인</button>
+    
+    <div id="videoLink" style="display: none;">
+        <p>비밀번호가 맞습니다! 아래 영상을 보세요.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>
